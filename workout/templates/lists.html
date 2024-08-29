@@ -1,0 +1,24 @@
+<h1>list page </h1>
+{% include "index.html" %}
+<ul>
+    <table border='1',border-collapse='collapse'>
+        <tr>
+            <th>Name</th>
+            <th>class</th>
+            <th>Department</th>
+            <th>Manage</th>
+          </tr>     
+{%for stud in students%}
+
+
+        <tr>
+          <td>{{stud.name}}</td>
+          <td>{{stud.classs}}</td>
+          <td>{{stud.dep}}</td>
+          <td><a href="{% url "edit" stud.id %}">edit</a>/<a href="{% url "Delete" stud.id %}">Delete</a></td>
+        </tr>
+        
+      
+{% endfor %}
+</table>
+</ul>

@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% block foots %}
+<h1>Admission list </h1>
+<ul>
+    <table border='1',border-collapse='collapse'>
+        <tr>
+            <th>Reg no</th>
+            <th>Reg date</th>
+            <th>Name</th>
+            <th>Manage</th>
+          </tr>     
+{% for adlist in adlist%}
+<tr>
+    <td>{{adlist.regno}}</td>
+    <td>{{adlist.regdate}}</td>
+    <td>{{adlist.name}}</td>
+    <td><a href="{% url "editad" adlist.id %}">edit</a>/<a href="{% url "deletead" adlist.id %}">Delete</a></td>
+  </tr>
+  
+{%endfor%}
+</table>
+</ul>
+{% endblock foots %}

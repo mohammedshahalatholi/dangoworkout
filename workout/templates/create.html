@@ -1,0 +1,13 @@
+{% include "index.html" %}
+<h1>create page </h1>
+<p>hello is a extends </p>
+<form method="post" entype="multipart/form-data"/>
+     {% csrf_token %}
+{% comment %} Name:<input type="test" name="name"/>
+class:<input type="test" name="classs"/>
+dep:<input type="test" name="dep"/> {% endcomment %}
+{{frm.as_p}}
+<button type="submit"> submit</button>
+</form>
+{% comment %} {% include "index.html" %} {% endcomment %}
+

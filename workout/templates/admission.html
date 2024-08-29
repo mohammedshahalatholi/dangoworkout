@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block foots %}
+<h1> admission page </h1>
+
+<h2> create </h2>
+
+<form method="post" entype="multipart/form-data"/>
+     {% csrf_token %}
+{% comment %} Name:<input type="test" name="name"/>
+class:<input type="test" name="classs"/>
+dep:<input type="test" name="dep"/> {% endcomment %}
+{{adfrm.as_p}}
+<button type="submit"> submit</button>
+</form>
+
+{% endblock foots %}
